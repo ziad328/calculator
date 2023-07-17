@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="circle_operators_color">#205b7a</color>
+    <color name="circle_numbers_color">#a2bbcf</color>
+    <color name="circle_clear_color">#1d3849</color>
+    <color name="circle_equal_color">#a2bbcf</color>
+    <color name="Number_bkg_color">@color/black</color>
+    <color name="status_bar_color">@color/black</color>
+    <color name="text_color_1">@color/black</color>
+    <color name="text_color_2">@color/black</color>
+    <color name="text_color_1_num">@color/white</color>
+    <color name="text_color_2_num">@color/white</color>
+
+</resources>

@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/numbers_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/box_number"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:weightSum="3"
+        app:layout_constraintHeight_percent=".2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/history_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_1_num"
+            android:textSize="32sp"
+            tools:text="1+4=6" />
+
+        <TextView
+            android:id="@+id/results_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_color_2_num"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            tools:text="13245" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:weightSum="5"
+        app:layout_constraintHeight_percent=".8"
+        app:layout_constraintTop_toBottomOf="@id/numbers_linear_layout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clear"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_clear"
+                android:onClick="onClearClick"
+                android:text="C"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_power"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onSquaredPowerClick"
+                android:text="x²"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_squre_root"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onSquaredRootClick"
+                android:text="√"
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_divide"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onOperatorClick"
+                android:text="÷"
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_7"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="7"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_8"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="8"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_9"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="9"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_multiply"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onOperatorClick"
+                android:text="×"
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_4"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="4"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_5"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="5"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_6"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="6"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_subtract"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onOperatorClick"
+                android:text="-"
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_1"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="1"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_2"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="2"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_3"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="3"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_sum"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_operators"
+                android:onClick="onOperatorClick"
+                android:text="+"
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_0"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="0"
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dot"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:onClick="onNumberClick"
+                android:text="."
+                android:textColor="@color/text_color_1"
+                android:textSize="24sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_delete"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_numbers"
+                android:contentDescription="delete"
+                android:drawableStart="@drawable/backspace"
+                android:onClick="onBackspaceClicked"
+                android:paddingStart="22dp"
+                android:textSize="24sp"
+                app:cornerRadius="36dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_equal"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/circle_equal"
+                android:onClick="onEqualClick"
+                android:text="="
+                android:textColor="@color/text_color_1"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
